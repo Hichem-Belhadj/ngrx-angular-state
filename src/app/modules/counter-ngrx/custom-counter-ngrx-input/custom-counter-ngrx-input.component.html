@@ -1,0 +1,11 @@
+<mat-card>
+  <mat-card-content>
+    <mat-form-field>
+      <mat-label>Input</mat-label>
+      <input placeholder="Enter value" matInput [(ngModel)]="value">
+    </mat-form-field>
+  </mat-card-content>
+  <mat-card-actions>
+    <button (click)="onAdd()" mat-button>ADD TO COUNTER</button>
+  </mat-card-actions>
+</mat-card>

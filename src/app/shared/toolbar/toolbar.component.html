@@ -1,0 +1,14 @@
+<mat-toolbar>
+  <app-menu></app-menu>
+  <span>My App</span>
+  <span class="example-spacer"></span>
+  <button *ngIf="!(isAuthenticated | async)" routerLink="/auth" mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+    <mat-icon>account_circle</mat-icon>
+  </button>
+  <button *ngIf="!(isAuthenticated | async)" routerLink="/auth/signup" mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+    <mat-icon>add</mat-icon>
+  </button>
+  <button (click)="onLogout($event)" *ngIf="isAuthenticated | async" routerLink="/auth/logout" mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+    <mat-icon>exit_to_app</mat-icon>
+  </button>
+</mat-toolbar>

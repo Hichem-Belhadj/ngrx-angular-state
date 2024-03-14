@@ -1,0 +1,23 @@
+<mat-dialog-content>
+  <p *ngIf="!isUpdate">Add new post</p>
+  <p *ngIf="isUpdate">Update post</p>
+  <form [formGroup]="post">
+    <p>
+      <mat-form-field>
+        <mat-label>Title</mat-label>
+        <input matInput formControlName="title">
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field>
+        <mat-label>Description</mat-label>
+        <input matInput formControlName="description">
+      </mat-form-field>
+    </p>
+  </form>
+
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancel</button>
+  <button mat-button (click)="add()" cdkFocusInitial>Ok</button>
+</mat-dialog-actions>
