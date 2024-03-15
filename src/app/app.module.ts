@@ -34,9 +34,11 @@ import { UpdatePostComponent } from './modules/post/update-post/update-post.comp
 import { DeletePostComponent } from './modules/post/delete-post/delete-post.component';
 import { AuthComponent } from './auth/auth.component';
 import { EffectsModule } from '@ngrx/effects';
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { AuthEffects } from './core/state/auth/auth.effects';
 import { SignupComponent } from './auth/signup/signup.component';
+import { PostEffects } from './core/state/post/post.effects';
+import { AuthTokenInterceptor } from './core/interceptor/auth-token.interceptor';
 
 @NgModule({
   declarations: [
@@ -67,7 +69,7 @@ import { SignupComponent } from './auth/signup/signup.component';
     MatButtonModule,
     MatCardModule,
     StoreModule.forRoot(appReducer),
-    EffectsModule.forRoot([AuthEffects]),
+    EffectsModule.forRoot([AuthEffects, PostEffects]),
     MatToolbarModule,
     MatIconModule,
     MatTableModule,
@@ -79,7 +81,8 @@ import { SignupComponent } from './auth/signup/signup.component';
     MatDialogModule,
   ],
   providers: [
-    provideAnimationsAsync()
+    provideAnimationsAsync(),
+    { provide: HTTP_INTERCEPTORS, useClass: AuthTokenInterceptor, multi: true }
   ],
   bootstrap: [AppComponent]
 })

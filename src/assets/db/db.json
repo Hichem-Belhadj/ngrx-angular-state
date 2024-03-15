@@ -1,0 +1,45 @@
+{
+    "posts": {
+      "post1": {
+        "title": "Premier post",
+        "description": "Ceci est la description du premier post."
+      },
+      "post2": {
+        "title": "Deuxième post",
+        "description": "Ceci est la description du deuxième post."
+      },
+      "post3": {
+        "title": "Troisième post",
+        "description": "Ceci est la description du troisième post."
+      },
+      "post4": {
+        "title": "Quatrième post",
+        "description": "Ceci est la description du quatrième post."
+      },
+      "post5": {
+        "title": "Cinquième post",
+        "description": "Ceci est la description du cinquième post."
+      },
+      "post6": {
+        "title": "Sixième post",
+        "description": "Ceci est la description du sixième post."
+      },
+      "post7": {
+        "title": "Septième post",
+        "description": "Ceci est la description du septième post."
+      },
+      "post8": {
+        "title": "Huitième post",
+        "description": "Ceci est la description du huitième post."
+      },
+      "post9": {
+        "title": "Neuvième post",
+        "description": "Ceci est la description du neuvième post."
+      },
+      "post10": {
+        "title": "Dixième post",
+        "description": "Ceci est la description du dixième post."
+      }
+    }
+  }
+  

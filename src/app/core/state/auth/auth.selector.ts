@@ -5,3 +5,4 @@ const getAuthState = createFeatureSelector<AuthState>('auth');
 
 export const getErrorMessage = createSelector(getAuthState, state => state.errorMessage);
 export const isAuthenticated = createSelector(getAuthState, state => !!state.user);
+export const getToken = createSelector(getAuthState, state => state.user ? state.user.userToken : null);

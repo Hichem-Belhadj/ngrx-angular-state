@@ -13,7 +13,7 @@ import { deletePost } from '../../../core/state/post/post.actions';
 })
 export class DeletePostComponent {
 
-  @Input() postId = 0;
+  @Input() postId = '';
   post?: Post;
 
   constructor(public dialog: MatDialog, private store: Store<AppState>) {}

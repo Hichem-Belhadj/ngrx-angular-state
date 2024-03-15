@@ -3,7 +3,7 @@ import {MatDialog} from "@angular/material/dialog";
 import {AddPostDialogComponent} from "../add-post-dialog/add-post-dialog.component";
 
 export interface DialogData {
-  id?: number;
+  id?: string;
   title: string;
   description: string;
   isUpdate?: boolean;

@@ -4,6 +4,7 @@ import {Observable} from "rxjs";
 import {Post} from "../../core/models/post.model";
 import {getPosts} from "../../core/state/post/post.selector";
 import {AppState} from "../../core/state/app/app.state";
+import { loadPosts } from '../../core/state/post/post.actions';
 
 @Component({
   selector: 'app-post',
@@ -18,5 +19,6 @@ export class PostComponent implements OnInit {
 
   ngOnInit() {
     this.posts$ = this.store.select(getPosts);
+    this.store.dispatch(loadPosts())
   }
 }

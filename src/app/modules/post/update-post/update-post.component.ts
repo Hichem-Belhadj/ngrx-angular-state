@@ -13,7 +13,7 @@ import { getPostById } from '../../../core/state/post/post.selector';
 })
 export class UpdatePostComponent {
 
-  @Input() postId = 0;
+  @Input() postId = '';
   post?: Post;
 
   constructor(public dialog: MatDialog, private store: Store<AppState>) {}
